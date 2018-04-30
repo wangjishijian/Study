@@ -1,0 +1,38 @@
+@charset="UTF-8";
+div{
+	width: 150px;
+	height: 150px;
+	font-size: 24px;
+	background: rgba(160, 30, 12, 0.9);
+	/*animation-name: mydh;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count:3;循环播放-infinite
+	animation-direction: alternate;轮流反向播放*/
+	animation:mydh 3s linear 0s 3 alternate;
+	animation-fill-mode: forwards;
+}
+@keyframes mydh{
+/*	from{
+		margin-left: 50px;动画变化前的样式
+		background: green;
+	}
+	to{
+		margin-left: 300px;动画变化后的样式
+		background: blue;
+	}*/
+	0%{
+		margin-left: 50px;/*动画片的开场剧情*/
+		background: green;
+	}
+	50%{
+		margin-top: 150px;/*动画片中的其他剧情*/
+		margin-left: 300px;
+		background: red;
+	}
+	100%{
+		margin-top: 300px;
+		margin-left: 50px;/*动画片的大结局*/
+		background: aqua;
+	}
+}

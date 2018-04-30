@@ -1,0 +1,136 @@
+@charset="UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+.html,body,.wrap{
+	height: 100%;
+	width: 100%;
+}
+body{
+	background: lightgreen;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+a:active{
+	text-decoration: underline;
+	color: #000;
+}
+/*header部分*/
+header{
+	background: pink;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	font-size: 13px;
+	color: #fff;
+}
+.ff{
+	width: 40px;
+	height: 50px;
+}
+.frp,.flp{
+	height: 25px;
+	width: 30px;
+	margin: 5px 5px auto;
+}
+.ss{
+    flex: 1;/*把剩余的都分给搜素框*/
+    margin: 8px 0;
+    height: 30px;
+    border-radius: 8px;
+    background-image: url(../image/search.png), url(../image/ht.png);
+    background-size: 25px, 25px;
+    background-repeat: no-repeat;
+    background-position: left, right;
+}
+header figcaption{
+	text-align: center;
+}
+input{
+	font-size: 15px;
+}
+/*footer*/
+footer{
+	width: 100%;
+	height: 32px;
+	background: aquamarine;
+	position: fixed;
+	bottom: 0;
+}
+#footer_list .list_li{
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	width: 25%;
+	font-size: 15px;
+	text-align: center;
+}
+#footer_list .list_li:nth-child(1){
+	background: url(../image/icon_tab_home_nomal.png) no-repeat;
+	background-size: 21px 21px;
+	background-position: top;
+
+}
+#footer_list .list_li:nth-child(1):active{
+	background: url(..image/icon_tab_home_selected.png) no-repeat;
+	background-size: 21px 21px;
+	background-position: top;
+}
+#footer_list .list_li:nth-child(2){
+	background: url(../image/icon_tab_featured_normal.png) no-repeat;
+	background-size: 21px 21px;
+	background-position: top;
+
+}
+#footer_list .list_li:nth-child(2):active{
+	background: url(..image/icon_tab_featured_selected.png) no-repeat;
+	background-size: 21px 21px;
+	background-position: top;
+}
+#footer_list .list_li:nth-child(3){
+	background: url(../image/icon_tab_cart_normal.png) no-repeat;
+	background-size: 21px 21px;
+	background-position: top;
+
+}
+#footer_list .list_li:nth-child(3):active{
+	background: url(..image/icon_tab_cart_selected.png) no-repeat;
+	background-size: 21px 21px;
+	background-position: top;
+}
+#footer_list .list_li:nth-child(4){
+	background: url(../image/bottombtn0201.png) no-repeat;
+	background-size: 21px 21px;
+	background-position: top;
+
+}
+#footer_list .list_li:nth-child(4):active{
+	background: url(..image/bottombtn0202.png) no-repeat;
+	background-size: 21px 21px;
+	background-position: top;
+}
+.title{
+	background-image: linear-gradient(to bottom, #DAAAAA, #E87373 80%, #DAAAAA);
+	height: 30px;
+	line-height: 30px;	
+}
+.main{
+	width: 375px;
+	height: 667px;
+	color: #000;
+	background: lightgreen;
+}
+.sp{
+	width: 50%;
+	float: left;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	background: lightgreen;
+	text-align: center;
+}

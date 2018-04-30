@@ -1,0 +1,52 @@
+@charset = "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.d4,.d2,.d3{
+		width: 100px;
+		height: 100px;
+		/*display: inline-block;*/
+		float: left;
+}
+.d0{
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	margin: 100px;
+	border: 1px solid red;
+	position: relative;
+
+}
+
+.d1{
+	width: 440px;
+	height: 100px;
+	position: absolute;
+	animation:cs 5s linear infinite;
+	animation-direction: normal;
+}
+
+.d2{
+			
+	background: orange;
+}
+		
+.d3{
+
+	background: red;
+}
+		
+.d4{
+
+	background: aqua;
+}
+
+@keyframes cs{
+
+	0% {right:0px};
+	55%{right: -100px;}
+	75%{right: -200px;}
+	100%{right: -300px;}

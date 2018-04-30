@@ -1,0 +1,55 @@
+@charset="UTF-8";
+div{
+	width: 300px;
+	height: 150px;
+	margin: 30px;
+	font-size: 28px;
+}
+#div1{
+	background: red;
+	transition-property: all;
+	transition-duration: 3s;
+	transition-timing-function: ease;/*先快后慢*/
+}
+#div1:hover{
+	background: green;
+	width: 150px;
+}
+#div2{
+	background: orange;
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: linear;/*匀速变化*/
+	
+}
+#div2:hover{
+	background: green;
+	width: 150px;
+}
+#div3{
+	background: blue;
+	transition: all 2s ease-in-out 0s;
+}
+#div3:hover{
+	background: green;
+	width: 150px;
+}
+#div4{
+	background:rgba(120, 60, 30, 0.8);
+	transition: width 1s ease,
+				background 2s linear;
+}
+#div4:hover{
+	background: green;
+	width: 150px;
+}
+#div5{
+	background:rgba(20, 160, 30, 0.8);
+	transition: all 1s ease 0.5s;
+}
+#div5:hover{
+	background:pink;
+	width: 150px;
+	transform: rotate(360deg); 
+}
+

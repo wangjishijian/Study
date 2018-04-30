@@ -1,0 +1,39 @@
+@charset="UTF-8";
+*{
+	padding: 0px;//内边距
+	margin: 0px;//外边距
+}
+img{
+	width: 200%;
+	border: 3px groove orange;
+}
+div{
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	animation: fz 5s infinite linear;
+}
+body{
+	perspective: 700px;
+}
+@keyframes fz{
+	0%{
+		transform: rotateY(45deg);
+	}
+	20%{
+		transform: rotateY(180deg);
+	}
+	40%{
+		transform: rotateY(360deg);
+	}
+	60%{
+		transform: rotateX(45deg);
+	}
+	80%{
+		transform: rotateX(180deg);
+	}
+	100%{
+		transform: rotateX(360deg);
+	}
+}

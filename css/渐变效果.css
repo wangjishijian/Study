@@ -1,0 +1,79 @@
+@charset="UTF-8";
+/*渐变效果*/
+div{
+	width: 300px;
+	height: 100px;
+	margin: 50px;
+	padding: 50px;
+	background: green;
+	border: groove rgba(200, 60, 30, 0.8);
+}
+.but1{
+	padding: 10px 20px;
+	font-size: 16px;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0.8);
+	border-radius: 20px;
+	background: linear-gradient(to left, orange, red);
+}
+.but1:hover{
+	background: linear-gradient(to right, orange, red);
+}
+#div1{
+	background-image: linear-gradient(red, blue);
+}
+#div2{
+	background-image: linear-gradient(to right, red, blue);//自左向右填充
+}
+#div3{
+	background-image: linear-gradient(to right bottom, red, blue);
+}
+#div4{
+	background-image: linear-gradient(60deg, red, blue);
+}
+#div5{
+	background-image: linear-gradient(30deg, red, blue, green, orange);
+}
+#div6{
+	background-image: linear-gradient(red 20%, blue 40%, green 80%, orange 100%);
+}
+#div7{
+	background-image: repeating-linear-gradient(60deg, red 20px, orange 40px);
+}
+#div8{
+	background: repeating-radial-gradient(circle 50px, red, blue, orange);
+}
+
+/*动画效果*/
+#div9:hover{
+	transform: translate(100px, 100px);
+}
+#div10:hover{
+	transform: translateX(-100px);
+}
+#div11:hover{
+	transform: translateY(-100px);
+}
+#div12:hover{
+	transform: scale(1.5, 0.5);
+}
+#div13:hover{
+	transform: scaleX(2);
+}
+#div14:hover{
+	transform: rotate(45deg);
+	transform-origin: left top;/*原本是以中心为旋转基准点的，现在改变为左上*/
+}
+#div15:hover{
+	transform: matrix(0.5, 0, 0, 0.5, 0, 0);/*缩小0.5倍*/
+}
+#div16:hover{
+	transform: scale(0.8, 0.5) rotate(30deg);
+}
+
+
+
+
+
+
+
+

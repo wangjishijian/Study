@@ -1,0 +1,62 @@
+@charset="UTF-8";
+li{
+	list-style-type: none;
+}
+.cart-top{
+	height: 25px;
+	line-height: 25px;
+	background-image:linear-gradient(to bottom, #DAAAAA, #E87373 80%, #DAAAAA);
+	padding: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #eee;	
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+	border-bottom: 2px solid #FF7F50;
+	border-radius: 3px 3px 0 0;
+}
+.cart-fl{
+	display: inline-block;
+	font-size: 20px;
+}
+.cart-fr{
+	float: right;
+}
+/******购物车物品列表样式******/
+.cart-item{
+	line-height: 25px;
+	padding: 10px 10px 10px 15px;
+	font-weight: bold;
+	background-image: linear-gradient(to bottom, #FFC0CB, #FFF0F5);
+	overflow: hidden;
+}
+.pic{
+	float: left;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+.des{
+	float: left;
+	color: #eee;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+}
+.price{
+	float: right;
+	color: #eee;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+}
+/*购物车总计样式*/
+.sum{
+	line-height: 32px;
+	padding: 10px 10px 10px 15px;
+	font-weight: bold;
+	background-image: linear-gradient(to bottom, #D3D3D3, #E0FFFF);
+}
+/*购物车结算按钮*/
+.cart-button{
+	line-height: 29px;
+	padding: 0 25px;
+	color: white;
+	border-radius: 10px;
+	background-image: linear-gradient(to bottom, #B0C4DE, #87CEFA);
+	float: right;
+}

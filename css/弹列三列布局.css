@@ -1,0 +1,36 @@
+@charset="UTF-8";
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body, html{
+	width: 100%;
+	height: 100%;
+	font: bold 24px 隶书;
+}
+header, footer{
+	background: rgba(30, 10, 10, 0.6);
+	padding: 15px;
+	text-align: center;
+	line-height: 2em;
+	color: #fff;
+}
+section{
+	background: rgba(5, 5, 5, 0.5);
+	flex-grow: 1;	
+	display: flex;
+	flex-flow: row;
+}
+article{
+	background: orange;
+	flex: 1;
+	min-width: 500px;
+}
+nav, aside{
+	width: 180px;
+	background:rgba(80, 20, 20, 0.8);
+}
+body{
+	display:flex;//开启盒子模式
+	flex-flow: column;
+}

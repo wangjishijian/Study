@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vedio</title>
+	<link rel="stylesheet" href="css/vedio.css">
+
+</head>
+<body>
+	<div id="main">
+		<video id="video" src="mp4/OneRepublic - Counting Stars.mp4" 
+		controls="controls" width="800"></video>
+		<div class="bar">
+		<div id="probar" style="width: 800px;"><div id="progress"></div></div>
+			<button id="playorpause" onclick="PlayOrPause()">4</button>
+			<button class="next" onclick="Next()">8</button>
+			<button class="back" onclick="Prev()">7</button>
+			<button class="muted0" onclick="Muted(this)">x</button>
+			<input id="vol" type="range" min="0" max="1" step="0.1" onchange="Volume()">
+			<button class="pic" onclick="CatchPicture()"><img src="image/截图.jpg" width="85%"></button>
+
+		</div>
+		<canvas id="canvas" width="300" height="200"></canvas>
+	</div>
+	
+	<script type="text/javascript">
+	var video = document.getElementById('video');
+	//播放暂停
+	function PlayOrPause(e) {
+		if (video.paused) {
+			video.play();
+			event.target.innerHTML=';'
+			event.target.style.color='red'
+		}
+		else{
+			video.pause();
+			event.target.innerHTML='4'
+			event.target.style.color='green'
+		}
+	}
+
+//前进和后退
+	function Next(){
+		video.currentTime += 60;
+	}
+
+	function Prev(){
+		video.currentTime -= 60;
+	}
+//设置静音
+	function Muted(){
+		if (video.muted) {
+			video.muted = false
+			event.target.innerHTML='X'
+			event.target.style.background='orange'
+			document.getElementById('vol').value = video.volume
+		}
+		else{
+			video.muted = true;
+			event.target.innerHTML = 'x'
+			event.target.style.background = 'white'
+			document.getElementById('vol').value = 0
+		}
+	}
+//设置声音
+function Volume(){
+	video.volume = event.target.value;
+}
+
+//进度条
+function Progress(){
+	var progress = document.getElementById("progress");
+	progress.style.width = (video.currentTime/video.duration)*100+'%'
+}
+window.onload = function(){
+	var progress = document.getElementById("progress");
+	var probar = document.getElementById("probar");
+	probar.addEventListener('click', progress_click)
+	video.addEventListener('timeupdate', Progress)
+
+}
+function progress_click(){
+	var progress = document.getElementById("progress");
+	var w = parseInt(document.getElementById("probar").style.width);
+	// alert(event.offsetX)
+	if (event.offsetX) {
+		video.currentTime = video.duration*(event.offsetX/w);
+	}
+	
+}
+
+function CatchPicture(){
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext('2d');
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+}
+
+
+	</script>
+</body>
+</html>
